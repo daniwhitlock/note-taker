@@ -11,7 +11,7 @@ Need a place to store your notes? Look no further. Simply click Get Started, ent
 * Shortid
 
 ## Check It Out Here
-[Deployed Application](https://daniwhitlock.github.io/note-taker/)
+[Deployed Application](https://floating-meadow-68725.herokuapp.com/)
 
 ## Images
 
