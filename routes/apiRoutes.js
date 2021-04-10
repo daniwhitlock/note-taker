@@ -16,11 +16,11 @@ router.get('/notes', (req, res) => { //make sure it matches the index.js get - m
 router.post('/notes', (req, res) => {
     // need to access the new Functions that you exported from function.js
     NoteDetails.addNotes(req.body)
-    .then(notes => { // not returning what we need it to return in the function.js = then addNotes
-        // console.log(notes); 
+    .then(notes => { //notes is coming from db.json from the back end
+        // pulling what was put in and put it to the front end (res- is front end)
+        res.json(notes);
     });
-    
-    // Functions.getNotes(); //pass in data, do the callback/promise, res.json whatever the note is
+   
 });
 
 module.exports = router;

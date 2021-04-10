@@ -61,6 +61,8 @@ const renderActiveNote = () => {
     noteTitle.value = activeNote.title;
     noteText.value = activeNote.title;
   } else {
+    noteTitle.removeAttribute('readonly');
+    noteText.removeAttribute('readonly');
     noteTitle.value = '';
     noteText.value = '';
   }
@@ -103,7 +105,7 @@ const handleNoteView = (e) => {
 };
 
 // Sets the activeNote to and empty object and allows the user to enter a new note
-const handleNewNoteView = (e) => { // TO DO?? IS THIS WHERE IT WON'T GET PAST
+const handleNewNoteView = (e) => { 
   activeNote = {};
   renderActiveNote();
 };
