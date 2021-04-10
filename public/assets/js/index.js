@@ -31,6 +31,7 @@ const getNotes = () =>
     headers: {
       'Content-Type': 'application/json',
     },
+    
   });
 
 const saveNote = (note) =>
@@ -40,6 +41,7 @@ const saveNote = (note) =>
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
+    
   });
 
 const deleteNote = (id) =>
@@ -101,7 +103,7 @@ const handleNoteView = (e) => {
 };
 
 // Sets the activeNote to and empty object and allows the user to enter a new note
-const handleNewNoteView = (e) => {
+const handleNewNoteView = (e) => { // TO DO?? IS THIS WHERE IT WON'T GET PAST
   activeNote = {};
   renderActiveNote();
 };

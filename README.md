@@ -6,6 +6,7 @@ Need a place to store your notes? Look no further. Simply click Get Started, ent
 ## Built With 
 * CSS
 * Javascript
+* HTML
 * Express
 * Node
 * Shortid

@@ -12,7 +12,9 @@ class NoteDetails {
         return readFile('db/db.json', 'utf8');
     }
     write(note) {
+        console.log(note);
         return writeFile('db/db.json', JSON.stringify(note));
+       
     }
 
     getNotes() {
@@ -33,17 +35,18 @@ class NoteDetails {
         };
         return this.getNotes()
             .then(data => { //read the note, give it a name (data), then we are going to...
-                console.log(data);
+                // console.log(data);
                 let results = JSON.parse(data);
                 results.push(newNote); //push new note into data
                 return results;
 
             })
             .then(noteResults => {
-                console.log(noteResults);
-                
+                // console.log(noteResults);
+                               
                 return this.write(noteResults); // write to the file
-            });
+            })
+            .then(() => newNote);
     }
 };
 
